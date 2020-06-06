@@ -10,6 +10,36 @@ python3 Main.py
 
 **Note** - Make sure you have Python 3.6 installed on your system.
 
+Project Structure : 
+
+```
+├── BookKeeper.py
+├── Main.py
+├── README.MD
+├── Utils
+│   ├── __init__.py
+│   ├── __pycache__
+│   └── utils.py
+├── __init__.py
+├── __pycache__
+└── models
+    ├── Expense
+    │   ├── EqualExpense.py
+    │   ├── Expense.py
+    │   ├── PercentageExpense.py
+    │   ├── __init__.py
+    │   └── __pycache__
+    ├── Split
+    │   ├── EqualSplit.py
+    │   ├── PercentageSplit.py
+    │   ├── Split.py
+    │   ├── __init__.py
+    │   └── __pycache__
+    ├── User.py
+    ├── __init__.py
+    └── __pycache__
+```
+
 Current list of available commands :  
 
 ```
