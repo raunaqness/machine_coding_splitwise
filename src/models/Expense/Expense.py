@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 import uuid
-from src.models.User import User
+from models.User import User
 
 
 class Expense(ABC):

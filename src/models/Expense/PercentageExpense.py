@@ -1,5 +1,5 @@
-from src.models.Expense import Expense
-from src.models.Split.PercentageSplit import PercentageSplit
+from models.Expense import Expense
+from models.Split.PercentageSplit import PercentageSplit
 
 
 class PercentageExpense(Expense.Expense):

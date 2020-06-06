@@ -1,6 +1,6 @@
-from src.models.User import User
-from src.models.Expense.EqualExpense import EqualExpense
-from src.models.Expense.PercentageExpense import PercentageExpense
+from models.User import User
+from models.Expense.EqualExpense import EqualExpense
+from models.Expense.PercentageExpense import PercentageExpense
 
 
 class Bookkeeper:
@@ -12,7 +12,7 @@ class Bookkeeper:
         self.balances = {}  # {'user_id' : 'balance'}
 
     def view_all_users(self):
-        for _, user in self.users.items():
+        for _, user in self.users_by_name.items():
             print(user)
 
     def add_user(self, name, email, phone_number):

@@ -1,4 +1,4 @@
-from src.models.Split import Split
+from models.Split import Split
 
 
 class PercentageSplit(Split.Split):

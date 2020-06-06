@@ -1,5 +1,5 @@
 import uuid
-from src.models.User import User
+from models.User import User
 
 
 class Split:

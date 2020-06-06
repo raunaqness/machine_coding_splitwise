@@ -1,7 +1,7 @@
-from src.models.Expense.Expense import Expense
-from src.models.Split.EqualSplit import EqualSplit
+from models.Expense.Expense import Expense
+from models.Split.EqualSplit import EqualSplit
 
-from src.Utils import utils
+from Utils import utils
 
 
 class EqualExpense(Expense):

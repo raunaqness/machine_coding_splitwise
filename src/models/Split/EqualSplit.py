@@ -1,5 +1,5 @@
 
-from src.models.Split import Split
+from models.Split import Split
 
 
 class EqualSplit(Split.Split):
