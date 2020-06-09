@@ -13,6 +13,7 @@ python3 Main.py
 Project Structure : 
 
 ```
+.
 ├── BookKeeper.py
 ├── Main.py
 ├── README.MD
@@ -23,9 +24,11 @@ Project Structure :
 ├── __init__.py
 ├── __pycache__
 └── models
+    ├── Exceptions.py
     ├── Expense
     │   ├── EqualExpense.py
     │   ├── Expense.py
+    │   ├── ExpenseType.py
     │   ├── PercentageExpense.py
     │   ├── __init__.py
     │   └── __pycache__
