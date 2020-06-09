@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import uuid
 from models.User import User
+from models.Expense.ExpenseType import ExpenseType
 
 
 class Expense(ABC):
@@ -11,7 +12,7 @@ class Expense(ABC):
     id: int
     added_by: User
     paid_by: User
-    expense_type: str
+    expense_type: ExpenseType
     total_amount: float
     splits: list
 
@@ -29,6 +30,7 @@ class Expense(ABC):
         self.set_expense_type(expense_type)
         self.set_total_amount(total_amount)
         self.set_added_by(added_by)
+
 
     @abstractmethod
     def validate(self):
@@ -74,10 +76,6 @@ class Expense(ABC):
     def add_split(self, split):
         self.__splits.append(split)
 
-    # def set_user_amounts(self, user_amounts):
-    #     self.__user_amounts = user_amounts
-    #
-    # def get_user_amounts(self):
-    #     return self.__user_amounts
+
 
 

@@ -1,5 +1,5 @@
 from BookKeeper import Bookkeeper
-
+from models.Exceptions import *
 
 class Main:
     def __init__(self):
@@ -17,7 +17,7 @@ class Main:
         3. View User Balance - "view_balance <name>"
         4. Add Expense :
             - Equal Expense : "add_expense <added_by> <created_by> <category> <total_amount> <expense_type> <list_of_users>"
-              Eg. - "add_expense Hardeep Hardeep equal 900 Raunaq Ashish"
+              Eg. : "add_expense Hardeep Hardeep equal 900 Raunaq Ashish"
             - Percentage Expense : "add_expense <added_by> <created_by> <category> <total_amount> <expense_type> <list of [user, percentage]>"
               For Example : "add_expense Raunaq Raunaq percentage 500 Hardeep 25.0 Ashish 40.0"
         5. View All Expenses of a User - "view_all_expenses <name>"
@@ -29,7 +29,7 @@ class Main:
         entities = console_input.split(' ')
 
         if len(entities) != 4:
-            raise Exception("Invalid input for adding new user.")
+            raise InvalidInput("Invalid input for adding new user.")
 
         name, email, phone_number = entities[1:4]
         self.bookkeeper.add_user(name, email, phone_number)
@@ -45,7 +45,7 @@ class Main:
         entities = console_input.split(' ')
 
         if len(entities) < 6:
-            raise Exception("Invalid input for adding new expense.")
+            raise InvalidInput("Invalid input for adding new expense.")
 
         added_by, created_by, category, total_amount, expense_type = entities[1:6]
         user_names = entities[5:]
@@ -54,7 +54,6 @@ class Main:
 
     def view_all_expenses(self):
         self.bookkeeper.view_all_expenses()
-
 
     def record_payment(self, console_input):
         pass

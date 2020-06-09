@@ -10,6 +10,7 @@ class Split:
     id: str
     user: User
     amount: float
+    type: str
 
     def __init__(self, user):
         self.__user = None
