@@ -46,7 +46,7 @@ class Bookkeeper:
 
     def view_user_balances(self, user_id):
         # check if user with id : user_id exists
-        user = self.users.get(user_id, None)
+        user = self.users_by_name.get(user_id, None)
 
         if user is None:
             raise UserDoesNotExist("User with ID : {} does not exist.".format(user_id))
